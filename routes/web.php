@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function () { //nilai default
+    return view('home' , [
+        "title" => "Home",
+    ]);
+});
+Route::get('/about', function () { //ketika memasukkan ke url /about
+    return view('about', [
+        "title" => "About",
+        "name" => "Salis Nizar Qomaruzaman",
+        "email" => "nizarsalis@gmail.com",
+        "image" => "sa.jpg"
+    ]); //maka akan mengakses view dalam resources dan mengakses about di dalamnya jika ada
+});
+Route::get('/posts', function () {
+    return view('posts',[
+        "title" => "Posts"
+    ]);
 });
