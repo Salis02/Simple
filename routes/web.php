@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,8 +28,7 @@ Route::get('/about', function () { //ketika memasukkan ke url /about
         "image" => "sa.jpg"
     ]); //maka akan mengakses view dalam resources dan mengakses about di dalamnya jika ada
 });
-Route::get('/posts', function () {
-    return view('posts',[
-        "title" => "Posts"
-    ]);
-});
+
+Route::get('/posts', [PostController::class, "index"]);
+
+Route::get('/posts/{post:slug}', [PostController::class, 'show']);
