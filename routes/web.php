@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\PostController;
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,25 @@ Route::get('/about', function () { //ketika memasukkan ke url /about
 Route::get('/posts', [PostController::class, "index"]);
 
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
+
+Route::get('/categories', function(){
+    return view('categories', [
+        'title' => 'Post Categories',
+        'categories' => Category::all()
+    ]);
+});
+
+Route::get('categories/{category:slug}', function(Category $category){
+    return view('posts', [
+        'title' => "Post By : $category->name",
+        'posts' => $category->posts->load('category', 'user'), //querynya kita sederhanakan
+    ]);
+});
+
+
+Route::get('/authors/{author:username}', function(User $author){
+    return view('posts', [
+        'title' => "Post By : $author->name",
+        'posts' => $author->posts->load('category', 'user'),
+    ]);
+});

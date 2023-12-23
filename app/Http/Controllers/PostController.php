@@ -16,8 +16,9 @@ class PostController extends Controller
     {
         //
         return view('posts',[
-            "title" => "Posts",
-            "posts" => Post::all()
+            "title" => "All Post",
+            // "posts" => Post::all() //menampilkan semua post di database
+            'posts' => Post::with(['user', 'category'])->latest()->get()//kita menghindari N+1 problem dengan menggunakan eager loading drpd lazy loade
         ]);
     }
 
