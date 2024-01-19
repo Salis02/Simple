@@ -1,70 +1,3 @@
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsum
-    excepturi, laborum perspiciatis pariatur quisquam earum suscipit cumque
-    reiciendis odio saepe consequuntur totam error,
-</p>
-<p>
-    <b>tempore possimus ab repellat dignissimos</b>obcaecati! Nemo voluptates,
-    assumenda quo officia at dicta voluptate repudiandae atque pariatur maxime
-    qui facere obcaecati accusantium a,
-</p>
-<p>
-    <u
-        >perspiciatis ipsum reiciendis! Saepe nulla hic id numquam tempore,
-        aspernatur et earum corporis dicta,</u
-    >
-    architecto fugiat odit temporibus possimus aut aliquam magni ea optio
-    adipisci. Repudiandae autem dolorum eius dolor aliquam pariatur sint
-    corporis distinctio nesciunt incidunt sit voluptatem quia, atque modi iure?
-</p>
-
-App\Models\Post::create([ 'title' => 'Judul keempat', 'category_id' => 3, 'slug'
-=> 'judul-keempat', 'excerpt' => 'Lorem ipsum dolor sit amet consectetur
-adipisicing elit. Neque ipsum excepturi, laborum perspiciatis pariatur quisquam
-earum suscipit', 'body' => '
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsum
-    excepturi, laborum perspiciatis pariatur quisquam earum suscipit cumque
-    reiciendis odio saepe consequuntur totam error,
-</p>
-<p>
-    <b>tempore possimus ab repellat dignissimos</b>obcaecati! Nemo voluptates,
-    assumenda quo officia at dicta voluptate repudiandae atque pariatur maxime
-    qui facere obcaecati accusantium a,
-</p>
-<p>
-    <u
-        >perspiciatis ipsum reiciendis! Saepe nulla hic id numquam tempore,
-        aspernatur et earum corporis dicta,</u
-    >
-    architecto fugiat odit temporibus possimus aut aliquam magni ea optio
-    adipisci. Repudiandae autem dolorum eius dolor aliquam pariatur sint
-    corporis distinctio nesciunt incidunt sit voluptatem quia, atque modi iure?
-</p>
-' ])
-
-<div class="card mb-3">
-    <img src=".." class="card-img-top" alt="" />
-    <div class="card-body">
-        <h5 class="card-title">Card Title</h5>
-        <p class="card-text">
-            This is widet card with supporting text bellow as natural lead
-        </p>
-        <p class="card-text">
-            <small class="text-muted">Last Update 3 min ago</small>
-        </p>
-    </div>
-</div>
-
-<div class="card">
-    <img src="" class="card-img-top" alt="" />
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet.</p>
-        <a href="" class="btn btn-primary">Link</a>
-    </div>
-</div>
-
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 
@@ -170,20 +103,20 @@ earum suscipit', 'body' => '
                 <!-- Example: -->
                 <div class="container">
                     <p>Sticky Bottom Element</p>
-                    {{-- <footer class="bg-dark text-light text-center py-3 bottom">
-                        <div class="container">
-                            <p class="mb-0">&copy;
-                                <script>
-                                    document.write(new Date().getFullYear())
-                                </script> Salis Blog. All rights reserved.
-                            </p>
-                        </div>
-                    </footer>
                     <!-- Add your sticky bottom element content here -->
                 </div>
             </div> --}}
         </div>
     </div>
+    <footer class="bg-dark text-light text-center py-3 bottom mt-3">
+        <div class="container">
+            <p class="mb-0">&copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> Salis Blog. All rights reserved.
+            </p>
+        </div>
+    </footer>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
